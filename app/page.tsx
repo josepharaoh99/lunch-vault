@@ -1,69 +1,129 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-slate-50 text-slate-900 font-sans">
+      {/* Header */}
+      <header className="max-w-5xl mx-auto px-6 py-8 flex justify-between items-center">
+        <h1 className="text-2xl font-extrabold tracking-tight text-red-600">
+          LunchVault
+        </h1>
+        <a
+          href="#pilot-form"
+          className="bg-red-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-700 transition"
+        >
+          Start Free Trial
+        </a>
+      </header>
+
+      {/* Hero Section */}
+      <section className="max-w-4xl mx-auto px-6 py-16 text-center">
+        <h2 className="text-4xl sm:text-5xl font-black tracking-tight mb-6">
+          Low Friction Catering Loyalty Growth
+        </h2>
+        <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+          Designed specifically for fast-casual operators and management. Drive thousands in high-margin B2B catering revenue with zero POS integration.
+        </p>
+      </section>
+
+      {/* How it Works */}
+      <section className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+          <div className="text-3xl mb-4">1️⃣</div>
+          <h3 className="text-xl font-bold mb-2">The Problem</h3>
+          <p className="text-slate-600">
+            Corporate spenders use company cards and need motivation to cater with your store over competitors.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+          <div className="text-3xl mb-4">2️⃣</div>
+          <h3 className="text-xl font-bold mb-2">The Solution</h3>
+          <p className="text-slate-600">
+            Clients snap photos of catering receipts, upload them, and compete on your store leaderboard for special rewards.
+          </p>
         </div>
-      </main>
-    </div>
+
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+          <div className="text-3xl mb-4">3️⃣</div>
+          <h3 className="text-xl font-bold mb-2">Zero Friction</h3>
+          <p className="text-slate-600">
+            No POS integrations needed. EULA compliant, receipt verified, and physical promotional materials provided.
+          </p>
+        </div>
+      </section>
+
+      {/* Form Section */}
+      <section id="pilot-form" className="max-w-xl mx-auto px-6 py-16">
+        <div className="bg-white p-8 rounded-2xl shadow-md border border-slate-200">
+          <h3 className="text-2xl font-bold text-center mb-2">
+            Start a Free 30-Day Trial
+          </h3>
+          <p className="text-slate-600 text-center mb-6 text-sm">
+            We provide graphics, materials, and tech. First month free, no obligation.
+          </p>
+
+          <form
+            action="https://formspree.io/f/xljrrkaq"
+            method="POST"
+            className="flex flex-col gap-4"
+          >
+            <div>
+              <label className="block text-sm font-medium mb-1">Your Name</label>
+              <input
+                type="text"
+                name="name"
+                required
+                className="w-full border border-slate-300 px-3 py-2 rounded-lg text-sm"
+                placeholder="John Smith"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">Store / Location Name</label>
+              <input
+                type="text"
+                name="store"
+                required
+                className="w-full border border-slate-300 px-3 py-2 rounded-lg text-sm"
+                placeholder="Chick-fil-A Midtown"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                required
+                className="w-full border border-slate-300 px-3 py-2 rounded-lg text-sm"
+                placeholder="john@store.com"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                required
+                className="w-full border border-slate-300 px-3 py-2 rounded-lg text-sm"
+                placeholder="(555) 000-0000"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition mt-2"
+            >
+              Claim Free Store Pilot
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-8 text-sm text-slate-500 border-t border-slate-200">
+        © {new Date().getFullYear()} LunchVault. All rights reserved.
+      </footer>
+    </main>
   );
 }
