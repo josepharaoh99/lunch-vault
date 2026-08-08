@@ -24,7 +24,7 @@ function Navbar() {
           href="/join"
           className="bg-red-600 text-white font-semibold px-3 sm:px-4 py-2 rounded-xl hover:bg-red-700 transition shadow-sm hover:shadow text-xs sm:text-base whitespace-nowrap"
         >
-          JOIN AS OPERATOR
+          JOIN TODAY!
         </Link>
       </nav>
     </header>
